@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSECTFLUX</title>
+<link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+<style>
+    /* General Styles */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fafafa;
+    }
+    /* Header Styles */
+    header {
+        background-color: #fff;
+        color: #333;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Ensure the header appears above other content */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual separation */
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .company-logo {
+        width: 70px; /* Adjust width as needed */
+        height: auto; /* Ensures aspect ratio is maintained */
+        margin-right: 10px; /* Adds space between logo and text */
+    }
+
+    .company-logo-2 {
+        width: 110px;
+        margin-bottom: -30px;
+        height: auto; /* Ensures aspect ratio is maintained */
+        margin-right: 10px; /* Adds space between logo and text */
+    }
+
+
+
+    header > div {
+        padding: 0 20px
+    }
+
+    .navbar-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 40px
+    }
+
+    .cta-button {
+        background-color: #304529;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50px;
+    }
+
+    header a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    header a:active {
+        color: #304529;
+    }
+
+    /* Diagram Section Styles */
+    .diagram-section {
+        height: 15%; /* Set the desired height */
+    }
+
+    .hero-section {
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 800px;
+        padding: 20px;
+    }
+    .hero-title {
+        font-size: 3.3rem;
+        margin-bottom: 20px;
+    }
+    .hero-title-2 {
+        font-size: 2.2rem;
+    }
+    .hero-description {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+
+    .hero-section-1 {
+        background-image: url('images/hero.jpeg');
+        height: 850px;
+    }
+
+    .hero-section-2 {
+        background-image: url('images/hero-2.jpeg');
+        height: 350px;
+    }
+
+    .hero-section-3 {
+        background-image: url('images/hero-3.jpeg');
+        height: 350px;
+    }
+
+    .hero-section-4 {
+        background-image: url('images/hero-4.jpeg');
+        height: 350px;
+    }
+
+    /* Partner Section Styles */
+    .partners-section {
+        padding: 50px 0;
+        background-color: #C1E1C2;
+        text-align: center;
+    }
+    .partners-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .partner-logo {
+        width: 150px;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 5px;
+    }
+    .title-2 {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+    }
+
+    .paragraph {
+    display: block;
+    text-align: center; /* Optional: Centers the paragraphs horizontally */
+    }
+
+    .paragraph p {
+        font-size: 20px;
+        margin: 40px 0; /* Adds space between paragraphs */
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #304529;
+        display: flex;
+        height: 200px;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer section {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    footer div.footer-links-wrapper {
+        margin: auto;
+        display: flex;
+        gap: 60px;
+    }
+
+    footer a, footer span {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #999999;
+    }
+
+    footer hr {
+        width: 98%;
+        margin-top: 40px;
+        border: 0;
+        border-top: 1px solid #fff;
+    }
+
+    footer .social {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    footer .legend {
+        padding-top: 26px;
+        margin-bottom: 10px;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* Diagram Sections */
+    .diagram-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 800px; */
+        padding: 0 0 50px 0;
+    }
+
+    .diagram-section img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .contact-button {
+        width: 200px;
+        height: 50px;
+        background-color: #304529;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center; /* Centers content horizontally */
+        align-items: center; /* Centers content vertically */
+        text-align: center; /* Aligns text within the button */
+        text-decoration: none; /* Remove underline for links */
+        margin: 100px 0;
+    }
+
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="company-logo" src="images/logo.jpeg" alt="Company Logo">
+            <div>
+                <h1 style="margin-bottom: 0;">INSECTFLUX</h1>
+                <p style="margin-top: 0; font-size: 14px;">Converting Organic Wastes into Assets</p>
+            </div>
+        </div>
+         
+        <div class="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#hub">Hub</a>
+            <a href="#problem">Problem</a>
+            <a href="#solution">Solution</a>
+            <a href="#about">About Us</a>
+            <a class="cta-button" href="#contact">Get Involved</a>
+        </div>
+    </header>
+    <section class="hero-section hero-section-1" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">A Small Step For Bugs</h1>
+            <h1 class="hero-title">A Giant Leap for Sustainability</h1>
+        </div>
+    </section>
+
+    <section class="title-2">
+        <h1>CHOOSE INSECTFLUX TO BE PART OF THE SOLUTION</h1>
+    </section>
+
+    <section class="partners-section">
+        <div class="partners-container">
+            <img src="images/aetiq-logo.png" alt="Partner 1" class="partner-logo">
+            <img src="images/ulaval-logo.png" alt="Partner 2" class="partner-logo">
+            <img src="images/osler-logo.png" alt="Partner 3" class="partner-logo">
+            <img src="images/table-filiere-logo.png" alt="Partner 4" class="partner-logo">
+            <img src="images/qc-logo.jpeg" alt="Partner 5" class="partner-logo">
+        </div>
+    </section>
+
+    <section class="hero-section hero-section-2" id="hub">
+        <div class="hero-content">
+            <h1 class="hero-title-2">THE INSECT FARMING - ORGANIC WASTE HUB</h1>
+        </div>
+    </section>
+
+    <section class="diagram-section" style="padding-top: 50px;">
+        <img src="images/diagram-1.png" alt="">
+    </section>
+
+    <section class="hero-section hero-section-3" id="problem">
+        <div class="hero-content">
+            <h1 class="hero-title-2">A 350B$ PROBLEM</h1>
+        </div>
+    </section>
+
+    <section class="paragraph">
+        <p>OVER 150M TONS OF FOOD ARE WASTED EVERY YEAR REPRESENTING A 350B$ PROBLEM IN NORTH AMERICA!</p>
+        <p>RICH NUTRIENTS END UP IN LANDFILLS, INCINERATORS AND INEFFICIENT</p>
+        <p>FOOD PROCESSORS, ONLY CAPTURING A FRACTION.</p>
+    </section>
+
+    <section class="diagram-section">
+        <img src="images/diagram-2.png" alt="">
+    </section>
+
+    <section class="hero-section hero-section-4" id="solution">
+        <div class="hero-content">
+            <h1 class="hero-title-2">AN INNOVATIVE SOLUTION</h1>
+        </div>
+    </section>
+
+    <section class="title-2">
+        <h1>CIRCULAR ECONOMY OF ORGANIC WASTES AT INDUSTRIAL SCALE</h1>
+    </section>
+
+    <section class="diagram-section">
+        <img src="images/diagram-3.png" alt="">
+    </section>
+
+    <section class="hero-section hero-section-3" id="about">
+        <div class="hero-content">
+            <h1 class="hero-title-2">INSECTFLUX - WHAT IS IT?</h1>
+        </div>
+    </section>
+    <section class="title-2">
+        <h1>ONLINE PLATFORM CONNECTING THE INSECT FARMING INDUSTRY WITH THE ORGANIC WASTE INDUSTRY</h1>
+    </section>
+
+    <section class="diagram-section">
+        <img src="images/diagram-4.png" alt="">
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="navbar-links">
+            <a href="mailto:jason@insectflux.com" class="cta-button contact-button">Contact Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <section>
+            <div class="footer-links-wrapper">
+                <a href="#home">Home</a>
+                <a href="#hub">Hub</a>
+                <a href="#problem">Problem</a>
+            </div>
+            <div>
+                <img class="company-logo-2" src="images/logo.jpeg" alt="Company Logo">
+            </div>
+            <div class="footer-links-wrapper">
+                <a href="#solution">Solution</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </section>
+        <hr>
+        <section class="legend">
+            <span>INSECTFLUX &copy; 2024.</span>
+            <div class="social">
+                <span>Follow Us:</span>
+                <a href="https://www.linkedin.com/company/insectflux" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a[href^="#"]');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</html>

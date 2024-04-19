@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark gray for main text content */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url(images/hero.jpeg);
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 10px 0;
+}
+
+.logo {
+  float: left;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000; /* Black for links */
+}
+
+nav a:hover {
+  background-color: #ddd; /* Maintain hover background color */
+}
+
+.hero {
+  background-color: #ddd; /* Use a light background color if no image is present */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: #fff; /* White text color for hero section */
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #fff; /* White color for hero section heading */
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px
+
